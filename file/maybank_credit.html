@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Quick Search</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<script src="https://kit.fontawesome.com/3d15aa1b08.js" crossorigin="anonymous"></script>
+
+</head>
+<style>
+    /* .sidebar{
+        background-color: lightcyan;
+    } */
+    .sidebar-item{
+        background-color: gold;
+        padding:10px 20px;
+        margin: auto;
+        margin-top:20px;
+        width: 70%;
+        text-align: center;
+        border-radius: 5px;
+    }
+    .status_text {
+  animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+    .sidebar-item p{
+        font-weight: 600;
+        font-size: 1rem;
+        color: black;
+        border-radius: 5px;
+        padding: 0px;
+        margin: auto;
+        margin-bottom: auto;
+
+    }
+    .modal {
+  text-align: center;
+  padding: 0!important;
+}
+
+.modal:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -4px; /* Adjusts for spacing */
+}
+
+.modal-dialog {
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+}
+    body{
+        overflow: hidden;
+    }
+    .container-whole{
+        height: 100vh;
+    }
+    .form-control{
+  outline: 1px solid black;
+
+}
+    .active{
+        background-color: darkgoldenrod;
+    }
+    .active p {
+        color:white;
+    }
+    .checkbox-container{
+        margin-left:20px
+    }
+    label{
+    font-weight: bold;
+}
+.form{
+    margin-top:50px;
+}
+</style>
+<body>
+    <div class="row container-whole">
+
+        <div class="col-md-3" style="align-self: center;">
+            <div class="sidebar">
+                <div class="sidebar-logo">
+                    <img src="../img/maybank.png" alt="" style='width: 100%;'>
+                </div>
+                <div class="sidebar-item ">
+                  <a href="maybank.html">
+                      <p>Quick Search</p>
+                    </a>
+                  </div>
+              <div class="sidebar-item active">
+                  <a href="maybank_credit.html">
+                  <p>Credit Scoring</p>
+                </a>
+              </div>
+              <div class="sidebar-item ">
+                  <a href="maybank_loan.html">
+                      <p>Loan Transfer & Release
+                      </p>
+                    </a>
+              </div>
+                <div class="sidebar-item">
+                    <p>Corporate Annual Report</p>
+                </div>
+                <div class="sidebar-item">
+                    <p>Coverage For TIPS</p>
+                </div>
+                <div class="sidebar-item">
+                    <p>Calculation For TIPS</p>
+                </div>
+                <div class="sidebar-item">
+                    <a href="../search.html">
+                      <p>Logout</p>
+                    </a>
+                </div>
+            </div>
+    
+        </div>
+
+        <div class="col-md-9" style="align-self: center;">
+            <div style="margin-top:40px;width: 80%;">
+
+                <div class="text-center">
+                  <h3 style="color:black;">Discovers ways to manage your money better , check info here : </h3>
+                  <h1 style="color:black;">Credit Scoring - Quick Search</h1>
+                </div>
+                <div class="form" >
+                    <form>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label>Nama Permohon</label>
+                                <input type="name" class="form-control" id="inputEmail4" placeholder="Nama Permohon">
+                            </div>
+                            <div class="form-group col-md-6">
+                              <label>Nomber K/P</label>
+                              <input type="text" class="form-control" id="inputEmail4" placeholder="Nomber K/P">
+                              <!-- <select id="inputState" class="form-control">
+                                <option selected>Choose...</option>
+                                <option>...</option>
+                              </select> -->
+                            </div>
+                          </div>
+                          <div class="form-group ">
+                            <label>Alamat</label>
+                            <textarea type="text" class="form-control" id="inputEmail4" placeholder="Alamat"></textarea>
+                            <!-- <select id="inputState" class="form-control">
+                              <option selected>Choose...</option>
+                              <option>...</option>
+                            </select> -->
+                          </div>
+                          <div class="form-group ">
+                            <label>Jenis Pinjaman</label>
+                            <select class="form-control">
+                              <option selected>Jenis Pinjaman</option>
+                              <option>Pinjaman Pelajaran  </option>
+                              <option>Pinjaman Peribadi</option>  
+                              <option>Pinjaman kereta</option>
+
+                            </select>
+                          </div>
+                          <div class="form-row">
+                            <div class="form-group col-md-6">
+                              <label for="inputCity">Jumlah Pinjaman</label>
+                              <input type="text" class="form-control" id="inputAddress2" placeholder="Jumlah Pinjaman">
+      
+                              <!-- <input type="text" class="form-control" id="inputCity"> -->
+                            </div>
+                            
+                          </div>
+                      
+                       
+                        <a data-toggle="modal" data-target="#exampleModal" class="btn btn-primary text-white" style="cursor: pointer;">Submit</a>
+                      </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal " id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+           
+
+            <div class="modal-body">
+                <div class="row">
+                   
+                    <div class="col-md-12 maybank_text">
+                        <h2>Quick Search Status</h2>
+                        <h3>Scoring : <span style="color: red;">49%</span></h3>
+                        <h3>Status : <span style="color: red;" class="status_text">FAILED</span></h3>
+                        <h4>Cagaran Diperlukan / Collateral Required (Tunai/FD/Hartanah) / Transfer Transaction Record</h4>
+
+                      </div>
+
+                </div>
+            </div>
+          
+          </div>
+        </div>
+      </div>
+    
+    
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+
+</html>

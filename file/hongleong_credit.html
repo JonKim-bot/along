@@ -14,7 +14,7 @@
         background-color: lightcyan;
     } */
     .sidebar-item{
-        background-color: gold;
+        background-color: blue;
         padding:10px 20px;
         margin: auto;
         margin-top:20px;
@@ -25,13 +25,22 @@
     .sidebar-item p{
         font-weight: 600;
         font-size: 1rem;
-        color: black;
+        color: white;
         border-radius: 5px;
         padding: 0px;
         margin: auto;
         margin-bottom: auto;
 
     }
+    .status_text {
+  animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
     .modal {
   text-align: center;
   padding: 0!important;
@@ -60,8 +69,9 @@
   outline: 1px solid black;
 
 }
+
     .active{
-        background-color: darkgoldenrod;
+        background-color: rgb(9, 9, 73);;
     }
     .active p {
         color:white;
@@ -82,21 +92,24 @@
         <div class="col-md-3" style="align-self: center;">
             <div class="sidebar">
                 <div class="sidebar-logo">
-                    <img src="img/maybank.png" alt="" style='width: 100%;'>
+                  <img src="../img/hongleong.png" alt="" style='width: 80%;margin:auto;margin-left:30px'>
                 </div>
                 <div class="sidebar-item ">
-                  <a href="maybank.html">
-                    <p>Quick Search</p>
-                  </a>
-                </div>
-                <div class="sidebar-item active">
-                    <a href="">
-                      <p>Credit Scoring</p>
-                   </a>
-                </div>
-                <div class="sidebar-item">
-                    <p>Corporate Plan</p>
-                </div>
+                  <a href="hongleong.html">
+                      <p>Quick Search</p>
+                    </a>
+                  </div>
+              <div class="sidebar-item active">
+                  <a href="hongleong_credit.html">
+                  <p>Credit Scoring</p>
+                </a>
+              </div>
+              <div class="sidebar-item ">
+                  <a href="hongleong_loan.html">
+                      <p>Loan Transfer & Release
+                      </p>
+                    </a>
+              </div>
                 <div class="sidebar-item">
                     <p>Corporate Annual Report</p>
                 </div>
@@ -107,7 +120,7 @@
                     <p>Calculation For TIPS</p>
                 </div>
                 <div class="sidebar-item">
-                    <a href="search.html">
+                    <a href="../search.html">
                       <p>Logout</p>
                     </a>
                 </div>
@@ -118,9 +131,10 @@
         <div class="col-md-9" style="align-self: center;">
             <div style="margin-top:40px;width: 80%;">
 
+
                 <div class="text-center">
-                  <h3 style="color:black;">Discovers ways to manage your money better , check info here : </h3>
-                  <h1 style="color:black;">Credit Scoring - Quick Search</h1>
+                  <h3 style="color:rgb(9, 9, 73);;">Discovers ways to manage your money better , check info here : </h3>
+                  <h1 style="color:rgb(9, 9, 73);;">Credit Scoring - Quick Search</h1>
                 </div>
                 <div class="form" >
                     <form>
@@ -182,12 +196,11 @@
             <div class="modal-body">
                 <div class="row">
                    
-                    <div class="col-md-12 maybank_text">
+                    <div class="col-md-12 hongleong_text">
                         <h2>Quick Search Status</h2>
-                        <h3>Scoring : <span style="color: red;">49%</span></h3>
-                        <h3>Status</h3>
-                        <h3 style="color: red;">Conditional Approval : Failed</h3>
-                        <h4>Cagaran Diperlukan / Collateral Required (Tunai/FD/Hartanah) / Transfer Transaction Record</h4>
+                        <h3>Scoring : <span style="color: red">49%</span></h3>
+                        <h3>Status : <span style="color: red;" class="status_text">FAILED</span></h3>
+                        <h4>Cagaran Diperlukan / Collateral Require (Tunai/FD/Hartanah) / Transfer Transaction Record</h4>
 
                       </div>
 
